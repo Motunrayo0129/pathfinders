@@ -1,0 +1,63 @@
+2.8
+public class Assignment {
+  public static void main(String[] args) {
+    System.out.println("Enter an integer: ");
+
+b) int a = b * c
+
+c) //This program performs sample payroll calculation
+
+
+2.9
+a) True
+b) False variable does not use certain symbols
+c) False as the second highest precedence
+d) True
+
+2.11
+a) 
+  public class Product {
+    public static void main(String[] args) {
+   
+int x = 5;
+int y =1;
+   
+   System.out.printf("x = %d", x+5 );
+	 
+  public class Product {
+    public static void main(String[] args) {
+   
+int x = 5;
+int y =1;
+   
+   System.out.printf("x = %d%n", x+5 );
+
+b)    System.out.printf("value of %d *%d is %d\n", x,y, (x*y) );
+     
+c)    System.out.printf("x is %d and y is %d", x,y);
+
+d)     System.out.printf("%d != %d\n", (x+y), (x*y) );
+
+2.14 public class Adjacent {
+  public static void main(String[] args) {
+System.out.println("1 2 3 4");
+System.out.println("1");
+System.out.println("2");
+System.out.println("3");
+System.out.println("4");
+
+   System.out.printf("1 2 3 4");
+
+2.17
+public class Asterisks {
+    public static void main(String[] args){
+    System.out.println("*********     ***          *        *");
+    System.out.println("*       *   *      *      ***      * *");
+    System.out.println("*       *  *         *   *****    *   *");
+    System.out.println("*       *  *         *     *     *      *");
+    System.out.println("*       *  *         *     *    *        *");
+    System.out.println("*       *  *         *     *     *      *");
+    System.out.println("*       *  *         *     *      *    *");
+    System.out.println("*       *   *       *      *       *  *");
+    System.out.println("*********      ***         *         *");
+ 
