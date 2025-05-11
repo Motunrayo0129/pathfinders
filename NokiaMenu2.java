@@ -46,7 +46,7 @@ NOKIA LIST OF MENU FUNCTIONS. PRESS
 				if (back == 0) 
 					System.out.println(display);
 				else 
-					System.out.println(); }
+					System.out.println(); } brea
 
 			default : System.out.println("invalid"); }
 			System.out.println("9. Speed dials");
