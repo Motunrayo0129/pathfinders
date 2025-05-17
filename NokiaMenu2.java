@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class NokiaMenu2 {
 	public static void main (String[] args) {
-
+	
 String display = """
 NOKIA LIST OF MENU FUNCTIONS. PRESS
 1. Phone book
@@ -17,115 +17,148 @@ NOKIA LIST OF MENU FUNCTIONS. PRESS
 11. Clock
 12. Profiles
 13. SIM services
+ press 14 to quit
 """;
-
 	System.out.println(display);
 
 	Scanner input = new Scanner(System.in);
-	System.out.print("Enter number: ");
+	System.out.print("Enter menu number: ");
 	int userInput = input.nextInt();
-
+		
 	switch(userInput)  {
+			
 		case 1: {
-			System.out.println("PHONE BOOK"); 
-			System.out.println("1. Search");
-			System.out.println("2. Service Nos");
-			System.out.println("3. Add name");			
-			System.out.println("4. Erase");
-			System.out.println("5. Edit");
-			System.out.println("6. Assign tone");			
-			System.out.println("7. Send b'card");
-			System.out.println("8. Options ");
-				int options = input.nextInt();
-			switch(options) {
-				case 1: 
+			String phoneBook = """ 
+			1. Search
+			2. Service Nos
+			3. Add name			
+			4. Erase
+			5. Edit
+			6. Assign tone			
+			7. Send b'card
+			8. Options 
+			9. Speed dials
+			10. voice tags 
+				""";
+			System.out.println(phoneBook);
+			System.out.print("Press 8 to enter option: ");
+			int options = input.nextInt();
+				switch(options) {
+				case 8 : 
 					 System.out.println("  1.Type of view ");
 					  System.out.println("  2. Memory Status" ); 
-					int back = 0;
-				switch(back)   {
-				if (back == 0) 
-					System.out.println(display);
-				else 
-					System.out.println(); } brea
+				default : System.out.println("invalid"); 
+			}
+			System.out.print("Enter 1 to go back phonebook or 0 to menu: ");
+				int bby = input.nextInt();
+				if (bby == 1) {
+				System.out.print(phoneBook); }
+				else if (bby == 0) {
+				System.out.print(display); }
+				else {
+				System.out.println("Bye!"); }
 
-			default : System.out.println("invalid"); }
-			System.out.println("9. Speed dials");
-			System.out.println("10. voice tags"); 
-
-				
          	   }  break;
-		
-
-		case 2 : {
-			System.out.println("MESSAGES"); 
-			System.out.println("1. Write messages");
-			System.out.println("2. Inbox");
-			System.out.println("3. Outbox");
-			System.out.println("4. Picture messages");
-			System.out.println("5. Templates");
-			System.out.println("6. Smileys");
-			System.out.println("7. Message setting  ");
+			case 2: {
+			String Messages = """
+			1. Write messages
+			2. Inbox
+			3. Outbox
+			4. Picture messages
+			5. Templates
+			6. Smileys
+			7. Message setting 
+			8. Info service
+			9. Voice mailbox number
+			10. Service command editor
+				""";
+				System.out.print(Messages);
+			System.out.print("press 1 or 2 for message setting(7): ");
 				int settings = input.nextInt();
 			switch(settings)  {
-				case 1 : 
+				case 1 : {
 				System.out.println(" SET 1  ");
 				System.out.println("  1. Messages centre number");
 				System.out.println("  2. Mssages sent as");
-				System.out.println("  3. Message validity");
+				System.out.println("  3. Message validity");  }  break;
 
-				case 2 : 
+				case 2 : {
 					System.out.println("COMMON  ");				
 					System.out.println("1. Delivery reports");
 					System.out.println("2. Reply via same centre");
-					System.out.println("3. Character support"); 
-
-				 default : System.out.println("invalid"); }
-				
-				System.out.println("8. Info service");
-				System.out.println("9. Voice mailbox number");
-				System.out.println("10. Service command editor");
+					System.out.println("3. Character support"); }
+						 }
+			System.out.print("Enter 1 to go back messages or 0 to menu: ");
+				int boy = input.nextInt();
+				if (boy == 1) {
+				System.out.print(Messages); }
+				else if (boy == 0) {
+				System.out.print(display); }
+				else {
+				System.out.println("Bye!"); }
 
 				} break;
 		 
 		case 3: {
-			System.out.println("CHAT"); } break;  
+			System.out.println("CHAT"); 
+			System.out.println("Enter (0) to go back to menu: ");
+					 int chat= input.nextInt();
+					if (chat == 0)
+					System.out.println(display); 
+
+					else {
+					System.out.println("Bye!"); }
+						} break;  
 
 		case 4: {
-				System.out.println("CALL REGISTER");
-				System.out.println("1. Missed call");
-				System.out.println("2. Received call");
-				System.out.println("3. Dialled numbers");
-				System.out.println("4. Erase recent call lists");
-				System.out.println("5. Show call duration   ");
+				String CallRegister = """
+				1. Missed call
+				2. Received call
+				3. Dialled numbers
+				4. Erase recent call lists
+				5. Show call duration
+				6. Show call costs  
+				7. Call cost settings  
+				8. Prepaid credit
+				       """;
+				System.out.println(CallRegister);							
+				System.out.print("press 5 to show call duration or 0 to next:");
 					int duration = input.nextInt();
 				switch (duration) {
-					case 1 : 
+					case 5 : 
 				System.out.println("  1. Last call duration");
 				System.out.println("  2. All calls' duration");
-				System.out.println("  3. Received calls' duration");
+				System.out.println("  3. Received calls' duration");                  
 				System.out.println("  4. Dialled calls' duration");
-				System.out.println("  5. Clear timers");
-				default : System.out.println("invalid");  }
-
-				System.out.println("6.Show call costs  ");
+				System.out.println("  5. Clera timers"); }
+			
+				System.out.print("Press 6 to show call cost or 0 to next: ");
 					int costs= input.nextInt();
 				switch (costs) {
-					case 1 :
+					case 6 :
 					System.out.println("  1. Last call cost");
 					System.out.println("  2. All calls' cost");
 					System.out.println("  3. Clear counters");
-					default : System.out.println("invalid"); 
-				System.out.println("7. Call cost settings   "); }
+					 }
+				System.out.print("Press 7 for call cost settings or 0 to next: ");
 					int cost = input.nextInt();
 				switch (cost) {
-					case 1:
+					case 7:
 				System.out.println("  1. Call cost limit");
-				System.out.println("  2. Show cost in"); 
-				default : System.out.println("invalid");  }
+				System.out.println("  2. Show cost in"); }
 
-				System.out.println("8. Prepaid credit");
+ 				System.out.print("Enter 1 to go back to call register or 0 to menu: ");
+				int boy = input.nextInt();
+				if (boy == 1) {
+				System.out.print(CallRegister); }
+				else if (boy == 0) {
+				System.out.print(display); 
+					}
+				else {
+				System.out.println("Bye!"); }
+					} break;
 
-			} break;
+			
 
 		case 5: {
 			System.out.println("TONES");
@@ -139,20 +172,36 @@ NOKIA LIST OF MENU FUNCTIONS. PRESS
 			System.out.println("  8. Vibrating alert ");
 			System.out.println("  9. Screen saver ");
 
-			}break;
+			System.out.print("Enter (0) to go back to menu or (1) to exit: ");
+					 int tone = input.nextInt();
+					if (tone == 0)
+					System.out.println(display); 
+
+					else {
+					System.out.println("Bye!"); }
+			} break;
+
 		case 6 : {
-			System.out.println("SETTINGS");
-			System.out.println("  1. Call s settings");
-				int callSettings = input.nextInt(); 
+			String Settings = """
+				1. Call  settings
+				2. Phone settings
+				3.Security settings
+				4.Restore factory settings
+					""";
+				System.out.println(Settings);
+			System.out.print("Enter 1 for call settings: ");	
+	          			 int callSettings = input.nextInt(); 
 			switch(callSettings) {
-				case 1: 
+				case 1: {
 			System.out.println("  1. Autonomial redial");
 			System.out.println("  2. Speed dialing");
 			System.out.println("  3. Call waiting options");
 			System.out.println("  4. Own number sending");
 			System.out.println("  5. Phone line in use");
-			System.out.println("  6. Automatic answer"); 
-
+			System.out.println("  6. Automatic answer"); }
+				System.out.print("Enter 2 for phone settings or 0 to next: ");
+					int phoneSettings = input.nextInt();
+				switch(phoneSettings)	{		
 				case 2: 
 			System.out.println("PHONE SETTINGS");
 			System.out.println("  1. Language");
@@ -160,8 +209,11 @@ NOKIA LIST OF MENU FUNCTIONS. PRESS
 			System.out.println("  3. Welcome note");
 			System.out.println("  4. Network selection");
 			System.out.println("  5. Lights");
-			System.out.println("  6. Confirn SIM service actions"); 
+			System.out.println("  6. Confirn SIM service actions"); }
 
+			System.out.print("Enter 3 for security settings or 0 to next: ");
+					int securitySettings = input.nextInt();
+				switch(securitySettings) {				
 				case 3: 
 			System.out.println("SECURITY SETTINGS");
 			System.out.println("  1. Pin code request");
@@ -169,24 +221,63 @@ NOKIA LIST OF MENU FUNCTIONS. PRESS
 			System.out.println("  3. Fixed dialling");
 			System.out.println("  4. Closed user group");
 			System.out.println("  5. Phone security");
-			System.out.println("  6. Change access codes");  
+			System.out.println("  6. Change access codes"); }
+ 
+			System.out.print("Enter (0) to go back to menu or (1) to settings: ");
+					int secure = input.nextInt();
+					if (secure == 0) {
+					System.out.println(display); }
+					if (secure == 1){
+					System.out.print(Settings); }
+					else {
+					System.out.print("Bye!"); }
+						}
+                                     } break;
 
-				case 4: 
-			System.out.println("RESTORE FACTORY SETTINGS"); }
-			  
-				} break;
+			
 		case 7: {
-			System.out.println("CALL DIVERT"); } break;
+			System.out.println("CALL DIVERT"); 
+
+			System.out.print("Enter (0) to go back to menu or (1) to exit: ");
+					 int divert = input.nextInt();
+					if (divert == 0)
+					System.out.println(display); 
+
+					else {
+					System.out.println("Bye!"); }
+                           } break;
 
 		case 8: {
-			System.out.println("GAMES"); } break;
+			System.out.println("GAMES");
+
+			System.out.println("Enter (0) to go back to menu  ");
+					 int games= input.nextInt();
+						} break;
 
 		case 9: {
-			System.out.println("CALCULATORS"); } break;
+			System.out.println("CALCULATORS"); 
+
+			System.out.print("Enter (0) to go back to menu or (1) to exit: ");
+					 int calculator = input.nextInt();
+					if (calculator == 0)
+					System.out.println(display); 
+
+					else {
+					System.out.println("Bye!"); }
+                } break;
 
 		case 10: {
 
-			System.out.println("  4. Network selection"); }  break;
+			System.out.println("REMINDERS");
+
+			System.out.print("Enter (0) to go back to menu or (1) to exit: ");
+					 int reminder = input.nextInt();
+					if (reminder == 0)
+				System.out.println(display); 
+
+					else {
+					System.out.println("Bye!"); }
+             }  break;
 		case 11: {
 			System.out.println("CLOCK");
 			System.out.println("  1. Alarm clock");
@@ -194,28 +285,49 @@ NOKIA LIST OF MENU FUNCTIONS. PRESS
 			System.out.println("  3. Date setting");
 			System.out.println("  4. Stop watch");
 			System.out.println("  5. Countdown timer");
-			System.out.println("  6. Auto update of date and time"); } break;
+			System.out.println("  6. Auto update of date and time"); 
+
+			System.out.print("Enter (0) to go back to menu or (1) to exit: ");
+					int clock  = input.nextInt();
+					if (clock == 0)
+					System.out.println(display); 
+
+					else {
+					System.out.print("Bye!"); }
+                          } break;
 		case 12: {
-			System.out.println("PROFILES"); } break;
+			System.out.println("PROFILES"); 
+
+			System.out.print("Enter (0) to go back to menu or (1) to exit: ");
+					 int zero = input.nextInt();
+					if (zero == 0)
+					System.out.println(display); 
+
+					else {
+					System.out.print("Bye!");  }
 				
- 		
-		case 13: {
+                                } break;
+				
+        		
+             		case 13: {
 			System.out.print("SIM SERVICES");
 
-		} break;
-	
+			System.out.print("Enter (0) to go back to menu or (1) to exit: ");
+					int menu = input.nextInt();
+					if (menu == 0)
+					System.out.println(display); 
 
+					else {
+					System.out.print("Bye!"); }
+                    
+						} break;
+				default : {
+						
+					System.out.print("Invalid input");  
+					System.out.println(display); }break;
 
-
-}
-
-
-
-
-
-
-
+} 
 
 
   }
-     }
+   }
